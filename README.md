@@ -27,7 +27,7 @@ so it overfits. Next steps: tune regularization (`C`) and use cross-validation.
 
 ```bash
 pip install -r requirements.txt
-# Generate the model file (not committed): run train notebook, it saves intent_model.joblib
+# Generate the model file: run train notebook, it saves intent_model.joblib
 uvicorn app:app --reload
 ```
 
@@ -42,12 +42,12 @@ curl -X POST http://127.0.0.1:8000/predict \
 Example response (from my own run):
 
 ```json
-{"intent": "[paste your real output here]"}
+{"intent": "declined_card_payment"}
 ```
 
 ## Project structure
 - `app.py`: FastAPI service
-- `train_notebook.ipynb`: training and evaluation
+- `Banking77.ipynb`: training and evaluation
 - `requirements.txt`: API dependencies
 
 ## Limitations
